@@ -22,8 +22,5 @@ public class score : MonoBehaviour
          score_display += 0.01f;
          scoreText.text = score_display.ToString("0");
         }
-        else{
-            scoreText.text = score_display.ToString("0");
-        }
     }
 }
