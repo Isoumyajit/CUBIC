@@ -15,7 +15,7 @@ public class groundspawnner : MonoBehaviour
 
     private void Start(){
 
-        for (long i = 1 ; i <= 10000 ; i++){
+        for (long i = 1 ; i <= 10 ; i++){
             spwancube();
         }
      
