@@ -9,6 +9,7 @@ public class Game_manager : MonoBehaviour
     public float restartDelay = 2f;
     public static bool game_over = false;
     public GameObject Game_Restrart_btn;
+    public GameObject Controller;
     public Text score_display;
 
     public void EndGame(){
@@ -22,6 +23,7 @@ public class Game_manager : MonoBehaviour
     }
 
     public void Trigger_restart_btn(){
+        Controller.SetActive(false);
         Game_Restrart_btn.SetActive(true); 
         score_display.text = score.score_display.ToString("0"); 
     }
