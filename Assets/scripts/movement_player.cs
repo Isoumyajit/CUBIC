@@ -1,10 +1,9 @@
-
 using UnityEngine;
 
 public class movement_player : MonoBehaviour
 {
     public Rigidbody rb;
-    public float forward_force = 2000f;
+    public float forward_force = 700f;
     public float sideway_force = 40f;
     public float sideway_force_mobile = 60f;
     public Game_manager game_obj;

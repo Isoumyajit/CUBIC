@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class Game_manager : MonoBehaviour
 {
 
@@ -14,6 +15,7 @@ public class Game_manager : MonoBehaviour
 
     public void EndGame(){
 
+        
         if(game_over == false){
             game_over = true;
             Debug.Log("Game Over");
