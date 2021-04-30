@@ -5,6 +5,8 @@ public class groundtile : MonoBehaviour
 {
         groundspawnner groundspwan;
         public GameObject obstaclesprefab;
+        public GameObject doorPrefab;
+        public GameObject _leftblankwallPrefab; 
 
         private void Start()
         {
@@ -19,8 +21,22 @@ public class groundtile : MonoBehaviour
 
         public void spwanObstacles(){
 
-            int spwanIndex = Random.Range(2, 5);
+            int spwanIndex = Random.Range(2, 6);
+        if (spwanIndex == 6)
+        {
+            Transform spwanPoint = transform.GetChild(spwanIndex).transform;
+            Instantiate(doorPrefab, spwanPoint.position, Quaternion.identity, transform);
+        }
+        if(spwanIndex == 5)
+        {
+            Transform spwanPoint = transform.GetChild(spwanIndex).transform;
+            Instantiate(_leftblankwallPrefab, spwanPoint.position, Quaternion.identity, transform);
+        }
+        else
+        {
             Transform spwanPoint = transform.GetChild(spwanIndex).transform;
             Instantiate(obstaclesprefab, spwanPoint.position, Quaternion.identity, transform);
+        }
+
         }
 }

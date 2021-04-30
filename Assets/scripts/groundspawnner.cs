@@ -9,7 +9,6 @@ public class groundspawnner : MonoBehaviour
 
     public void spwancube(){
         GameObject temp = Instantiate(groundplane, nextspwanpoint, Quaternion.identity);
-
         nextspwanpoint = temp.transform.GetChild(1).transform.position;
     }
 

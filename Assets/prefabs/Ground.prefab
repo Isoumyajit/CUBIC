@@ -94,6 +94,7 @@ Transform:
   - {fileID: 8278002040540360868}
   - {fileID: 281170534269429364}
   - {fileID: 8043605513979847868}
+  - {fileID: 1291001969093645182}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -123,6 +124,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstaclesprefab: {fileID: 3562030597450355399, guid: b0aafa5e005c40f499448426a5a3938e, type: 3}
+  doorPrefab: {fileID: 391610038050443282, guid: e45f938ce8ef6e34195d15111aeac3f1, type: 3}
+  _leftblankwallPrefab: {fileID: 723514756514254682, guid: c2e487d55911d594486a1d67ddd6c51a, type: 3}
+--- !u!1 &7385647327335427532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1291001969093645182}
+  m_Layer: 0
+  m_Name: nextwallSpwanPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1291001969093645182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385647327335427532}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.5, y: 0, z: 30}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 440126314252018741}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7758362427170102507
 GameObject:
   m_ObjectHideFlags: 0
