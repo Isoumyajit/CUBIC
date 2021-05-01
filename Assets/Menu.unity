@@ -757,7 +757,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.12194, y: 3.1383972}
+  m_AnchoredPosition: {x: -0.12194, y: 3.1384277}
   m_SizeDelta: {x: 337.26, y: 53.9692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &337032460
@@ -1463,7 +1463,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.12255035, y: 3.1383972}
+  m_AnchoredPosition: {x: -0.12255035, y: 3.1384277}
   m_SizeDelta: {x: 337.26, y: 53.9692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &810652491
@@ -2788,7 +2788,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -0.12224518, y: 3.1383972}
+  m_AnchoredPosition: {x: -0.12224518, y: 3.1384277}
   m_SizeDelta: {x: 337.26, y: 53.9692}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1472275475
@@ -3323,7 +3323,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1055711132}
         m_TargetAssemblyTypeName: welcomeScreen, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3601,7 +3601,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1055711132}
         m_TargetAssemblyTypeName: welcomeScreen, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3610,7 +3610,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
 --- !u!114 &1876389988
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23,7 +23,8 @@ public class score : MonoBehaviour
             {
                 movement_player.increase_speed();
             }
-         scoreText.text = score_display.ToString("0");
+            
+            scoreText.text = score_display.ToString("0");
         }
     }
 }

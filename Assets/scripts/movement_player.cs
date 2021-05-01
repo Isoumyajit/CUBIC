@@ -14,7 +14,7 @@ public class movement_player : MonoBehaviour {
     private void FixedUpdate()
     {
         _velocity.z = speed * Time.fixedDeltaTime;
-        if (!Left.isLeftpressed && !Right.isRightpressed)
+        if (!Left.isLeftpressed && !Right.isRightpressed && rb)
         {
             xmov = Input.GetAxis("Horizontal");
             _velocity.x = xmov * sideway_force_keyboard * Time.deltaTime;

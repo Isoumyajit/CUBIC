@@ -18,16 +18,19 @@ public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         _velocity.z = speed * Time.fixedDeltaTime;
 
-        if (isLeftpressed)
+        if (rb)
         {
-            _velocity.x = -sideway_force * Time.deltaTime;
-            rb.velocity = _velocity;
-        }
-        if (rb.position.y < -1f || rb.position.x < -10 || rb.position.x > 10)
+            if (isLeftpressed)
             {
-                
+                _velocity.x = -sideway_force * Time.deltaTime;
+                rb.velocity = _velocity;
+            }
+            if (rb.position.y < -1f || rb.position.x < -10 || rb.position.x > 10)
+            {
+
                 FindObjectOfType<Game_manager>().EndGame();
             }
+        }
         
     }
     public void OnPointerDown(PointerEventData evenData)

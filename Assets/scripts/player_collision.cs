@@ -11,12 +11,13 @@ public class player_collision : MonoBehaviour
 
     public GameObject destroyEffect;
     public Rigidbody rb;
+    private Game_manager game_obj;
       public void OnCollisionEnter (Collision collisionInfo){
-            if(collisionInfo.collider.tag == "Obstacle"){
-
+            if(collisionInfo.collider.tag == "Obstacle" && rb){
+            rb.velocity += new Vector3(0, 0, -70000f);
             Instantiate(destroyEffect, rb.position, Quaternion.identity, transform);
-             FindObjectOfType<Game_manager>().EndGame();
-            
+            Destroy(gameObject, 2f);
+            FindObjectOfType<Game_manager>().EndGame();
         }
       }
 
