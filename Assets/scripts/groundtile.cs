@@ -10,7 +10,8 @@ public class groundtile : MonoBehaviour
     public GameObject _piepPrefab;
     public GameObject _ringPrefab;
     public GameObject _powerPrefab;
-    //public GameObject _ballPrefab;
+
+    public GameObject _ballPrefab;
 
 
 
@@ -25,26 +26,36 @@ public class groundtile : MonoBehaviour
         }
 
         private void OnTriggerExit(Collider other) {
-            groundspwan.spwancube();
-            Destroy(gameObject, 1); 
+
+            if (other.tag == "Player")
+            {
+                groundspwan.spwancube();
+                Destroy(gameObject, 1f);
+            }
         }
 
         public void spwanObstacles(){
 
        
         int spwanIndex = Random.Range(3, 8);
-        int[] pipespwanIndex = new int[] {8,9};
+        int[] pipespwanIndex = new int[] {8, 9};
 
         
-
+        //pipes spwanning at both the sides of lane 
+        //------------------------------------------------
         Transform spwanpoint = transform.GetChild(pipespwanIndex[0]).transform;
         Instantiate(_piepPrefab, spwanpoint.position, Quaternion.identity, transform);
         spwanpoint = transform.GetChild(pipespwanIndex[1]).transform;
-
-
-        
-
         Instantiate(_piepPrefab, spwanpoint.position, Quaternion.identity, transform);
+        //-------------------------------------------------
+
+        //spwanning balls at the lanes 
+        //-----------------------------------
+        spwanpoint = transform.GetChild(10).transform;
+        Instantiate(_ballPrefab, spwanpoint.position, Quaternion.identity, transform);
+        spwanpoint = transform.GetChild(11).transform;
+        Instantiate(_ballPrefab, spwanpoint.position, Quaternion.identity, transform);
+        //-----------------------------------
 
         if(spwanIndex == 3)
         {

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class groundspawnner : MonoBehaviour
@@ -14,7 +13,7 @@ public class groundspawnner : MonoBehaviour
 
     private void Start(){
 
-        for (long i = 1 ; i <= 10 ; i++){
+        for (int i = 1 ; i <= 10 ; i++){
             spwancube();
         }
      

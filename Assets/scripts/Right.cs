@@ -8,16 +8,18 @@ public class Right : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public Rigidbody rb;
     private float sideway_force;
     private Vector3 _velocity;
+    private float speed;
 
     public static bool isRightpressed = false;
     private void Start()
     {
         _velocity = Vector3.zero;
         sideway_force = 1700f;
+        speed = 3000f;
     }
     private void FixedUpdate()
     {
-
+        _velocity.z = speed * Time.fixedDeltaTime;
         if (rb)
         {
             if (isRightpressed)
