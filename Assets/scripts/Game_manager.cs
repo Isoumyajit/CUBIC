@@ -46,7 +46,6 @@ public class Game_manager : MonoBehaviour
 
         HighScore.text = PlayerPrefs.GetInt("Highest_score").ToString();
         score_display.text = score.score_display.ToString("0");
-        Debug.Log(PlayerPrefs.GetInt("Highest_score").ToString());
         
     }
     public void TriggerRestartbtn(){
@@ -59,8 +58,9 @@ public class Game_manager : MonoBehaviour
         score.score_display = 0f;
         Game_manager.game_over = false;
         pausemenu.isPaused = false;
-       
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Left.isLeftpressed = false;
+        Right.isRightpressed = false;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
    
     }
     public void back_to_main(){

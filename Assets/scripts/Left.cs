@@ -3,21 +3,20 @@ using UnityEngine.EventSystems;
 public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     public Rigidbody rb;
-    public float sideway_force = 500f;
-    public static float speed = 3000f;
-    public Vector3 _velocity;
+    private float sideway_force;
+    private Vector3 _velocity;
     public static bool isLeftpressed = false;
+
 
     // Update is called once per frame
     //FixedUpdate is used for playing with physics
     private void Start()
     {
         _velocity = Vector3.zero;
+        sideway_force = 1700f;
     }
     private void FixedUpdate()
     {
-        _velocity.z = speed * Time.fixedDeltaTime;
-
         if (rb)
         {
             if (isLeftpressed)
@@ -25,9 +24,9 @@ public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
                 _velocity.x = -sideway_force * Time.deltaTime;
                 rb.velocity = _velocity;
             }
-            if (rb.position.y < -1f || rb.position.x < -10 || rb.position.x > 10)
+            if (rb.position.y < -1f || rb.position.x < -11 || rb.position.x > 11)
             {
-
+           
                 FindObjectOfType<Game_manager>().EndGame();
             }
         }
@@ -35,7 +34,7 @@ public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
     public void OnPointerDown(PointerEventData evenData)
     {
-        Debug.Log("yes");
+ 
         isLeftpressed = true;
     }
 
@@ -43,5 +42,4 @@ public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         isLeftpressed = false;
     }
-
 }

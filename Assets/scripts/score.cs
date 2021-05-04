@@ -19,7 +19,8 @@ public class score : MonoBehaviour
     {
          if(Game_manager.game_over == false && !pausemenu.isPaused){
          score_display += 0.05f;
-         if(score_display == 20f || score_display == 50f|| score_display == 70f || score_display == 100f || score_display == 120f || score_display == 150f)
+          int score_checker = (int)score_display;
+         if(score_checker == 20 || score_checker == 50 || score_checker == 70 || score_checker == 100 || score_checker == 120f || score_checker == 150)
             {
                 movement_player.increase_speed();
             }
@@ -27,4 +28,5 @@ public class score : MonoBehaviour
             scoreText.text = score_display.ToString("0");
         }
     }
+
 }
