@@ -8,6 +8,7 @@ public class welcomeScreen : MonoBehaviour
          public GameObject welcomemenu;
 
          public void StartGame(){
+            Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 

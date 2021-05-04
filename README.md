@@ -6,4 +6,4 @@
 
  ## Simple 3d Unity Game. It's a try to get into the world of Game development
 
- ###
+ ### It's a simple game but i am trying to add more exciting features to it
