@@ -53,8 +53,6 @@ public class groundtile : MonoBehaviour
         //-----------------------------------
         spwanpoint = transform.GetChild(10).transform;
         Instantiate(_ballPrefab, spwanpoint.position, Quaternion.identity, transform);
-        spwanpoint = transform.GetChild(11).transform;
-        Instantiate(_ballPrefab, spwanpoint.position, Quaternion.identity, transform);
         //-----------------------------------
 
         if(spwanIndex == 3)

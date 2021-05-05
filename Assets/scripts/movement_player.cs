@@ -5,7 +5,7 @@ public class movement_player : MonoBehaviour {
     private float sideway_force_keyboard;
     private static float speed;
     private float xmov;
-    public Vector3 _velocity;
+    private Vector3 _velocity;
 
 
 

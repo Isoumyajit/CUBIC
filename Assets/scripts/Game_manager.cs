@@ -16,31 +16,45 @@ public class Game_manager : MonoBehaviour
     public Text score_display;
     public GameObject Ui;
     public Text HighScore;
-    int High_score;
+    private int High_score;
+    public GameObject _celebrationPrefab;
+    public GameObject palyer;
+    public GameObject Score;
 
     private void Start()
     {
         High_score = PlayerPrefs.GetInt("Highest_score", 0);
     }
+
+    private void Update()
+    {
+       if(High_score < score.score_display)
+        {
+            Instantiate(_celebrationPrefab, palyer.transform.position , Quaternion.identity, transform);
+        } 
+    }
     public void EndGame(){
 
         if(game_over == false){
-            Game_manager.game_over = true;
+            game_over = true;
             Debug.Log("Game Over");
             Invoke("Trigger_restart_btn", restartDelay);
         }
     }
 
     public void Trigger_restart_btn(){
+
+        Score.SetActive(false);
         Controller.SetActive(false);
         Lft.SetActive(false);
         Rht.SetActive(false);
         Pause.SetActive(false);
-        int High_score = PlayerPrefs.GetInt("Highest_score", 0);
+        High_score = PlayerPrefs.GetInt("Highest_score", 0);
         int score_current = int.Parse(score.score_display.ToString("0"));
         Debug.Log(score_current +" " + High_score);
         if (score_current > High_score)
             PlayerPrefs.SetInt("Highest_score", score_current);
+
 
         Game_Restrart_btn.SetActive(true);
 
@@ -55,17 +69,13 @@ public class Game_manager : MonoBehaviour
             Time.timeScale = 1f;
         }
         Ui.SetActive(false);
-        score.score_display = 0f;
-        Game_manager.game_over = false;
+        game_over = false;
         pausemenu.isPaused = false;
-        Left.isLeftpressed = false;
-        Right.isRightpressed = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
    
     }
     public void back_to_main(){
-        Game_manager.game_over = false;
-        score.score_display = 0f;
+        game_over = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

@@ -3,25 +3,19 @@ using UnityEngine;
 
 public class player_collision : MonoBehaviour
 {
-    /*
-    private movement_player move;
-    private Left Left_key;
-    private Right Right_key;
-    */
-
     //public GameObject __powereffectspeedUp;
     public Rigidbody rb;
     private Game_manager game_obj;
 
-    public float cubeSize = 0.2f;
-    public int cubesInRow = 5;
+    private float cubeSize = 0.2f;
+    private int cubesInRow = 5;
 
-    float cubesPivotDistance;
+    private float cubesPivotDistance;
     Vector3 cubesPivot;
 
-    public float explosionForce = 10f;
-    public float explosionRadius = 5f;
-    public float explosionUpward = 0.4f;
+    private float explosionForce = 10f;
+    private float explosionRadius = 5f;
+    private float explosionUpward = 0.4f;
 
 
 

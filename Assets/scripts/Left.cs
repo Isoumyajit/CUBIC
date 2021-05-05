@@ -5,7 +5,7 @@ public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     public Rigidbody rb;
     private float sideway_force;
     private Vector3 _velocity;
-    public static bool isLeftpressed = false;
+    public static bool isLeftpressed;
     private float speed;
 
     // Update is called once per frame
@@ -15,6 +15,7 @@ public class Left : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         _velocity = Vector3.zero;
         sideway_force = 1700f;
         speed = 3000f;
+        isLeftpressed = false;
     }
     private void FixedUpdate()
     {

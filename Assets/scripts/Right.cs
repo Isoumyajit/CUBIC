@@ -10,12 +10,13 @@ public class Right : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private Vector3 _velocity;
     private float speed;
 
-    public static bool isRightpressed = false;
+    public static  bool isRightpressed = false;
     private void Start()
     {
         _velocity = Vector3.zero;
         sideway_force = 1700f;
         speed = 3000f;
+        isRightpressed = false;
     }
     private void FixedUpdate()
     {

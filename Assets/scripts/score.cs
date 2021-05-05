@@ -9,11 +9,14 @@ public class score : MonoBehaviour
     public Text scoreText;
     public static float score_display;
     public bool check_gameOver;
+    private move_obstacle obj;
     
     // Update is called once per frame
     void Start(){
+        obj = new move_obstacle();
         score_display = 0f;
         scoreText.text = score_display.ToString("0");
+        score_display = 0;
     }
     void Update()
     {
@@ -23,6 +26,7 @@ public class score : MonoBehaviour
          if(score_checker == 20 || score_checker == 50 || score_checker == 70 || score_checker == 100 || score_checker == 120f || score_checker == 150)
             {
                 movement_player.increase_speed();
+                obj.increaseobstacleMoveSpeed();
             }
             
             scoreText.text = score_display.ToString("0");
